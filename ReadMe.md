@@ -85,7 +85,35 @@ Union Types: se puede poner un tipo de dato y luego llamar ese tipo en una varia
     let dynamicVar: UserID = "300";
 ```
 * Null y Undefined
+Nos permiten que una variable o función trabaje con datos null o undefined. Cuando queremos hacer funciones con argumentos opcionales en una función, estas deben ubicarse al final, si no TypeScript nos indicará un **error, ya que podría haber confusiones al momento de invocar la función y enviar los respectivos parámetros:
+```
+  function randomFunc(title: string, amount?: number){} //CORRECTO
 
+  function otherFunc(title?: string, amount: number){} // ERROR
 
+```
+* Void 
+Podemos hacer funciones que reciban parametros de un tipo en especifico: 
+```
+const printTotal = (prices: number [])=>{
+ //
+ }
+```
+También podemos especificar el tipo de dato que debe retornar: 
+```
 
+const calcTotal = (prices: number []): number =>  { //
+}
+```
 
+También se especifica que una función no tiene el retorno de un dato (recuerda que si no hay return, el resultado puede ser undefined): 
+
+```
+const calcTotal = (prices: number []): void =>  { //
+}
+```
+  * Enviando Objetos como parametros de las funciones
+  Con el tipado podemos darle seguridad a 
+  - Los tipos de datos de las variables que se pueden almacenar.En una variable se puede tipar un objeto con una estructura determinada.
+  - Utilizar dicho objeto como parametro de una función, o como valor de retorno de dicha función. 
+  Revisar _15-objs.ts_.  
