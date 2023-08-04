@@ -7,6 +7,7 @@
   console.log('cutomerAge',customerAge)
 
   let productStock: number; // se pueden declarar las variables sin inicializarla
+  productStock = 8
   console.log('productStock', productStock);
   if(productStock > 10){
     console.log('is greater than 10')
