@@ -25,6 +25,11 @@ Esto crea un archivo con propiedades comentadas las cuales podemos activar. El c
 * outDir: indicando la carpeta dist como el directorio destino de los archivos transpilados.
 * rootDir: indicamos que nuestros archivos TypeScript, los cuales serán “compilados” luego, estarán en la carpeta src.
 
+Se pueda habilitar el análisis de código de TypeScript en un archivo JavaScript con 
+```
+@ts-check
+```
+
 ## Tipado 
 JS < ESNext < Typescript
 
@@ -117,3 +122,12 @@ const calcTotal = (prices: number []): void =>  { //
   - Los tipos de datos de las variables que se pueden almacenar.En una variable se puede tipar un objeto con una estructura determinada.
   - Utilizar dicho objeto como parametro de una función, o como valor de retorno de dicha función. 
   Revisar _15-objs.ts_.  
+
+Teniendo en cuenta esta instrucción `const rta = 1 + '1';` ¿Cuál sería el tipo de dato que infiere TS de rta?
+Cuando hay librerías que no tiene  soporte a tipos se puede agregar el soporte a tipos usando el comando 
+
+```
+  npm i @types/lodash --save-dev
+
+```
+
